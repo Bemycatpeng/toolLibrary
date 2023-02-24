@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: '刘鹏的在线阅读文档',
+  tagline: 'Liu Peng\'s online reading document',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -64,19 +64,19 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: '点点我试试',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/exclusive_logo.jpg',
         },
         items: [
           {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: '文档',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: '博客', position: 'left'},
           {
             href: 'https://github.com/Bemycatpeng/toolLibrary',
             label: 'GitHub',
