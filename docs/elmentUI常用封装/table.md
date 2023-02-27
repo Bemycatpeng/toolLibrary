@@ -25,13 +25,14 @@
         :fixed="column.fixed"
         align="center"
     >
+      <template #default="scope">
+        <div v-if="column.prop === 'goodsId'"
+        >
+          {{ scope.row.goodsBrand }}
+        </div>
+        <span v-else>{{ scope.row[column.prop] }}</span>
+      </template>
       <!--品牌-->
-      <div
-        v-if="column.prop === 'goodsId'"
-      >
-        {{ scope.row.goodsBrand }}
-      </div>
-      <span v-else>{{ scope.row[column.prop] }}</span>
     </el-table-column>
 </el-table>
 ```
@@ -56,4 +57,32 @@
       label: '操作', prop: 'operation', fixed: 'right', width: '200',
     },
   ],
+```
+
+## 搭配上分页器使用
+
+```html
+<el-pagination
+    v-model:current-page="searchPrams.pageNum"
+    v-model:page-size="searchPrams.pageSize"
+    :page-sizes="[2, 4, 6, 10]"
+    layout="total, sizes, prev, pager, next, jumper"
+    :total="searchPrams.totalCount"
+    @size-change="handleSizeChange"
+    @current-change="handleCurrentChange"
+/>
+```
+
+```javascript
+// 分页器回调
+const handleCurrentPageChange = (val) => {
+  pagingData.value.current_page = val;
+  requestSupplierList();
+};
+
+const handleSizeChange = (val) => {
+  pagingData.value.page_size = val;
+  pagingData.value.current_page = 1;
+  requestSupplierList();
+};
 ```

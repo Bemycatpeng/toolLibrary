@@ -20,22 +20,20 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: '这里面是什么',
     Svg: require('@site/static/img/dataAccumulation2.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+          这里记录了您在学习新技术或新工具时所学到的知识和经验，例如如何使用 React、如何使用 Git 管理代码等。该文档的重点是为您自己和其他人提供有用的参考资料，以便在未来的项目中更加高效地使用这些工具和技术。
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: '他能给你带来什么',
     Svg: require('@site/static/img/dataAccumulation3.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+          它们可以帮助您和您的团队在技术领域取得成功，同时也为未来的项目提供了重要的参考资料。选择正确的文档类型将有助于确保您的信息得到清晰地传达和理解，同时也将使您的团队更加高效地工作。
       </>
     ),
   },
