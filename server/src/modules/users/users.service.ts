@@ -3,7 +3,7 @@ import { Injectable } from '@nestjs/common';
 export type User = any;
 
 @Injectable()
-export class AuthService {
+export class UsersService {
   private readonly users = [
     {
       userId: 1,
@@ -18,10 +18,12 @@ export class AuthService {
   ];
 
   async findOne(username: string): Promise<User | undefined> {
-    return this.users.find((user) => user.username === username);
-  }
+    const name = this.users.find((user) => user.username === username);
 
-  getHello(): string {
-    return 'Hello World! 你好世界！我亲爱的世界';
+    if (!username) {
+      return { code: 0, msg: '获取用户信息失败', data: null };
+    }
+
+    return { code: 1, msg: '获取用户信息成功', data: name };
   }
 }
